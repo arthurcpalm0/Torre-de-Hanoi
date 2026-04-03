@@ -1,29 +1,25 @@
 public class Pilha <T>{
-    // atributos
     private static final int TAM_DEFAULT = 100;
     private int topoPilha;
     private T elementos[];
-    @SuppressWarnings("unchecked")
-    // construtores
     public Pilha(int tamanho){
         this.elementos = (T[]) new Object[tamanho];
         this.topoPilha = -1;
-    }
-
-    public T get(int index){
-        if (index>=0 && index<=topoPilha){
-            return elementos[index];
-        }
-        else{
-            throw new Exception ("Erro - Indice inválido");
-        }
     }
 
     public Pilha(){
         this(TAM_DEFAULT);
     }
 
-    // métodos
+    public T get(int index) throws Exception{
+    if (index>=0 && index<=topoPilha){
+        return elementos[index];
+    }
+    else{
+        throw new Exception ("Erro - Indice inválido");
+    }
+    }
+
     public boolean isEmpty(){
         return this.topoPilha == -1;
     }
@@ -47,7 +43,6 @@ public class Pilha <T>{
             T temp = this.elementos[topoPilha];
             topoPilha--;
             return temp;
-            // Jeito mais simples: return this.elementos[this.topoPilha--];
         }
         else {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
