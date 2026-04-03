@@ -1,10 +1,13 @@
 public class Torre{
+    // Atributos
     private Pilha<Disco> p;
 
+    // Construtor
     public Torre(int tamanho){
         p = new Pilha<Disco>(tamanho);
     }
 
+    // Método que verifica se o disco sendo colocado é menor que o disco abaixo.
     public boolean podeEmpilhar(Disco disco) throws Exception{
         if (p.isEmpty()){
             return true;
@@ -18,6 +21,7 @@ public class Torre{
         }
     }
     
+    // Método que empilha o disco na torre.
     public void empilhar(Disco disco) throws Exception{
         if (podeEmpilhar(disco))
         {
@@ -25,6 +29,7 @@ public class Torre{
         }
     }
 
+    // Método que desempilha o disco da torre.
     public Disco desempilhar() throws Exception{
         if (!p.isEmpty()){
             return p.pop();
@@ -33,6 +38,8 @@ public class Torre{
             throw new Exception("Tentando tirar um disco de uma torre vazia");
         }
     }
+
+    // Método que retorna o disco no topo da torre.
     public Disco topoTorre() throws Exception{
         if (!p.isEmpty()){
             return p.topo();
@@ -42,10 +49,12 @@ public class Torre{
         }
     }
 
+    // Método que retorna a quantidade de discos.
     public int qtdDiscos(){
         return p.tamanho();
     }
 
+    // Método que retorna um disco especifico na torre.
     public Disco getDisco(int index) throws Exception{
         if (!p.isEmpty()){
             return p.get(index);
@@ -55,6 +64,7 @@ public class Torre{
         }
     }
 
+    //  Método que verifica se a torre está vazia.
     public boolean estaVazia(){
         return p.isEmpty();
     }

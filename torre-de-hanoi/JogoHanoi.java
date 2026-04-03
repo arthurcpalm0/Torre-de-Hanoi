@@ -1,7 +1,10 @@
 public class JogoHanoi{
+
+    // Atributos
     private Torre[] torre;
     private int numDiscos;
 
+    // Construtor
     public JogoHanoi(int tamanho) throws Exception{
         this.torre = new Torre[3];
         for(int i = 0; i < 3; i++){
@@ -14,6 +17,7 @@ public class JogoHanoi{
         }
     }
 
+    // Método que move um disco de uma torre para outra.
     public void mover(int index1, int index2) throws Exception{
         if (torre[index2].podeEmpilhar(torre[index1].topoTorre())){
             torre[index2].empilhar(torre[index1].desempilhar());
@@ -23,6 +27,7 @@ public class JogoHanoi{
         }
     }
 
+    // Método responsavel pela impressão das torres na tela.
     public void mostrar() throws Exception{
         System.out.println("Torre 1:    Torre 2:    Torre3:");
         for (int i = numDiscos-1; i>=0; i--){
@@ -43,6 +48,7 @@ public class JogoHanoi{
         }
     }
 
+    // Método que verifica se o jogo já foi concluido.
     public boolean jogoTerminado(){
         if (torre[0].estaVazia() && (torre[1].estaVazia()||torre[2].estaVazia())){
             return true;

@@ -1,3 +1,7 @@
+// Arthur Candido Palma
+// RA: 10743580
+
+
 import java.util.Scanner;
 
 public class Main{
@@ -12,7 +16,7 @@ public class Main{
                     int nMin = (int) Math.pow(2,tam)-1;
                     JogoHanoi jogo = new JogoHanoi(tam);
                     do{
-                        System.out.printf("1- Mover Disco\n2-Mostrar Torres\n3-Reiniciar jogo\n4- Sair\n");
+                        System.out.printf("1-Mover Disco\n2-Mostrar Torres\n3-Reiniciar jogo\n4-Sair\n");
                         int opcao = entrada.nextInt();
                         opmenu = Menu(jogo, opcao, entrada, tam);
                         if (opmenu==1){
@@ -43,6 +47,7 @@ public class Main{
         entrada.close();
     }
 
+    // Menu
     static int Menu(JogoHanoi jogo, int opcao, Scanner entrada, int tam) throws Exception{
         switch (opcao) {
             case 1:
