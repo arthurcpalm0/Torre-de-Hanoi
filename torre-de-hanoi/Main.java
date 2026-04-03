@@ -1,7 +1,6 @@
 // Arthur Candido Palma
 // RA: 10743580
 
-
 import java.util.Scanner;
 
 public class Main{

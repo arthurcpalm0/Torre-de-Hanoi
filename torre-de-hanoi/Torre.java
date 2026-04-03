@@ -1,3 +1,6 @@
+// Arthur Candido Palma
+// RA: 10743580
+
 public class Torre{
     // Atributos
     private Pilha<Disco> p;

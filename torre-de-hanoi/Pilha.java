@@ -1,3 +1,6 @@
+// Arthur Candido Palma
+// RA: 10743580
+
 public class Pilha <T>{
     // Atributos
     private static final int TAM_DEFAULT = 100;
